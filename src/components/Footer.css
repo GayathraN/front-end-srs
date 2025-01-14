@@ -1,0 +1,33 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #f0f0f0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #555;
+  }
+  
+  .footer a:hover {
+    color: #007bff;
+  }
+  
+  .footer .social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  
+  .footer .container {
+    padding: 0 15px;
+  }
+  
+  @media (max-width: 576px) {
+    .footer .social-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
