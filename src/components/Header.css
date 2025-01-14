@@ -1,8 +1,121 @@
 /* src/components/Header.css */
-/* Header Style */
-header {
+.header {
     background: linear-gradient(135deg, rgba(0, 180, 235, 0.8) 0%, rgba(4, 78, 143, 0.8) 40%, rgba(80, 183, 72, 1.2) 100%);
-}
-
-
-
+    padding: 50px 0; /* More space at the top and bottom */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 85vh; /* Full screen height */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .header .logo {
+    max-width: 350px; /* Control logo size */
+    margin-bottom: 30px; /* Space between logo and the title */
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .header h1 {
+    font-size: 3rem; /* Larger font for main title */
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Modern look with uppercase */
+    letter-spacing: 2px; /* Slight letter spacing */
+  }
+  
+  .subheading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 30px;
+  }
+  
+  button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"] {
+    margin-bottom: 15px;
+  }
+  
+  button.btn-primary {
+    background-color: rgba(0, 180, 235, 1);
+    border: none;
+    color: white;
+  }
+  
+  button.btn-secondary {
+    background-color: rgba(80, 183, 72, 1);
+    border: none;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.2rem; /* Smaller font on smaller screens */
+    }
+  
+    .subheading {
+      font-size: 1rem; /* Adjust subheading font size */
+    }
+  
+    .logo {
+      max-width: 120px; /* Smaller logo on smaller screens */
+    }
+  
+    form {
+      width: 80%;
+    }
+  
+    button {
+      font-size: 1rem; /* Adjust button font size */
+    }
+  }
+  
