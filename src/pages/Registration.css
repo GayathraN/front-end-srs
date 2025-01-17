@@ -1,0 +1,322 @@
+body {
+  background-color: #000;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.istockphoto.com/id/1295114854/photo/empty-red-armchairs-of-a-theater-ready-for-a-show.webp?b=1&s=612x612&w=0&k=20&c=z0aVjmKAMuc9cTXGGD5_Y2W06ONe1MtMMrQplOyk1L4=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2.5px);
+  z-index: -1;
+}
+
+
+.registraton-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it occupies the full viewport height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registraton-card {
+  background-color: rgba(217, 217, 217, 0.67);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  text-align: center;
+  width: 100%; /* Use percentage to adapt on smaller screens */
+  min-width: 900px; /* Maintain a maximum width */
+  height: auto; /* Allow content to define height */
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.registraton-logo {
+  width: 250px;
+  margin-bottom: 40px;
+  margin-top: -80px;
+  margin-right: 550px; /* Reduced to accommodate the larger logo */
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  color: #044E8F;
+  margin-bottom: 30px;
+  margin-top: -150px;
+  margin-left: 150px;
+}
+
+
+.logo-admin {
+  width: 250px; /* Increased logo size */
+  margin-bottom: 40px;
+  margin-top: -40px;
+  margin-right: 550px; /* Reduced to accommodate the larger logo */
+}
+
+
+.h2-admin {
+  font-size: 1.5rem;
+  color: #044E8F;
+  margin-bottom: 40px;
+  margin-top: -120px;
+  margin-left: 150px;
+}
+
+.registraton-error-message {
+    color: #b10808;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 150px;
+}
+
+
+.registraton-form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: -120px;
+}
+
+select {
+    color: black; /* Change the text color of the selected value */
+}
+
+select option {
+    color: black; /* Change the text color of the options */
+}
+
+label {
+  flex: 0 0 35%;
+  text-align: right;
+  color: #333;
+  font-weight: bold;
+}
+
+.registraton-form-control {
+  flex: 1;
+  padding: 6px;
+  margin-left: 10px;
+  margin-right: 50px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #044E8F 0%, #50B748 100%);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.registraton-form-control::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+
+
+.registraton-date-group {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 120px;
+  margin-right: 50px;
+}
+
+.registraton-date-input {
+  flex: 1;
+  margin-right: 10px; /* Space between the two inputs */
+}
+
+.registraton-date-input:last-child {
+  margin-right: 0; /* Remove margin from the last input */
+}
+
+.registraton-form-control-date {
+  width: 60%; /* Use full width of parent */
+  padding: 6px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #044E8F 0%, #50B748 100%);
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.registraton-form-control-date::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+
+
+
+.registraton-btn {
+  width: 20%; /* Smaller button width */
+  padding: 8px; /* Adjusted padding */
+  background: linear-gradient(135deg, #044E8F 0%, #50B748 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 250px;
+  display: block; /* Center the button */
+}
+
+.registraton-btn:hover {
+  background: linear-gradient(135deg, #046A98 0%, #50B748 100%);
+  transform: translateY(-2px);
+}
+
+.registraton-login-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 10px;
+  margin-right: -150px;
+}
+
+.registraton-login-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.registraton-login-link:hover {
+  color: #35393d;
+  text-decoration: underline;
+}
+
+
+/* Styling for the default 'Select Admin' option */
+select.registraton-form-control option[disabled] {
+    color: #888;
+    font-style: italic;
+}
+
+/* General styling for the dropdown options */
+select.registraton-form-control option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Hover effect for dropdown options */
+select.registraton-form-control option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for the selected option */
+select.registraton-form-control option:checked {
+    background: linear-gradient(135deg, #044E8F 0%, #50B748 100%);
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .registraton-card {
+    min-width: unset; /* Remove minimum width */
+    width: 100%; /* Use full screen width */
+    padding: 15px; /* Adjust padding */
+    box-sizing: border-box;
+  }
+
+  .registraton-logo {
+    width: 150px; /* Reduce logo size */
+    margin: 0 auto; /* Center the logo */
+    display: block;
+  }
+
+  h2, .h2-admin {
+    font-size: 1.2rem; /* Adjust font size */
+    margin: 10px auto; /* Center align */
+    text-align: center; /* Center text */
+  }
+
+  .registraton-form-group {
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  label {
+    text-align: left;
+    margin-bottom: 5px; /* Space between label and input */
+  }
+
+  .registraton-form-control {
+    width: 100%; /* Full width for input fields */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .registraton-date-group {
+    flex-direction: column; /* Stack inputs */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .registraton-form-control-date {
+    width: 100%; /* Full width for date fields */
+    margin-left: 0;
+  }
+
+  .registraton-btn {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Adjust padding */
+    margin: 15px auto; /* Center button */
+    display: block; /* Ensure button alignment */
+  }
+
+  .registraton-login-text {
+    text-align: center; /* Center text */
+    margin-right: 0;
+  }
+
+  .registraton-login-link {
+    text-align: center; /* Center link */
+  }
+}
+
+@media (max-width: 480px) {
+  .registraton-logo {
+    width: 120px; /* Further reduce logo size */
+    margin: 0 auto; /* Center logo */
+  }
+
+  h2, .h2-admin {
+    font-size: 1rem; /* Smaller font for very small screens */
+    margin: 10px auto; /* Adjust spacing */
+    text-align: center;
+  }
+
+  .registraton-btn {
+    width: 100%; /* Full width for the button */
+    padding: 12px; /* Adjust padding */
+    margin: 10px auto;
+  }
+}
